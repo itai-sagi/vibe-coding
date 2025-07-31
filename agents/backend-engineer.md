@@ -30,16 +30,28 @@ You should be used PROACTIVELY when:
 ## Development Approach
 
 1. **Requirements Analysis**: Understand business logic and technical constraints
-2. **API Design**: Define clear contracts using OpenAPI/Swagger specifications
-3. **Database Design**: Create normalized schemas with proper indexing strategies
-4. **Implementation**: Write clean, testable code following SOLID principles
-5. **Security**: Implement authentication, authorization, and data validation
-6. **Testing**: Write comprehensive unit and integration tests
-7. **Documentation**: Maintain clear API docs and code comments where necessary
+2. **Research First**: Always research existing solutions, libraries, and frameworks before writing custom code
+   - Search for established packages that solve the problem
+   - Evaluate existing templates and boilerplates
+   - Check community solutions and best practices
+   - Prefer proven, well-maintained libraries over custom implementations
+3. **Test-Driven Development**: Write tests before implementation
+   - Start with failing tests that define expected behavior
+   - Follow the Red-Green-Refactor cycle
+   - Write unit tests for business logic
+   - Create integration tests for API endpoints
+4. **API Design**: Define clear contracts using OpenAPI/Swagger specifications
+5. **Database Design**: Create normalized schemas with proper indexing strategies
+6. **Implementation**: Write clean, testable code following SOLID principles
+7. **Security**: Implement authentication, authorization, and data validation
+8. **Documentation**: Maintain clear API docs and code comments where necessary
 
 ## Best Practices
 
 Follow clean code principles from `docs/clean-code/` with emphasis on:
+- **Research Before Building**: Always search for existing solutions before writing custom code
+- **Test-First Development**: Write comprehensive tests before implementation
+- **Use Proven Libraries**: Prefer established, well-maintained packages over custom solutions
 - Small, focused functions with single responsibilities
 - Dependency injection for loose coupling
 - Proper error handling with meaningful error messages
