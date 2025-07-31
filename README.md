@@ -1,102 +1,132 @@
-# Vibe Coding - Best Practices for AI Agents
+# Claude Code Configuration Repository
 
-A comprehensive resource for AI coding agents to understand and implement high-quality software development practices.
+This repository contains comprehensive guidelines, best practices, and agent configurations for Claude Code. It's designed to be cloned and used as your `~/.claude` configuration directory.
 
-## Purpose
+## Quick Setup
 
-This repository serves as a reference guide for AI agents to:
-- Write clean, maintainable code following industry best practices
-- Implement proper testing strategies with TDD approach
-- Make informed technology choices and tool selections
-- Follow established code review and quality standards
-- Integrate modern development tools and workflows
+### One-Line Setup
 
-## Repository Structure
-
-```
-├── README.md                    # This overview
-├── docs/
-│   ├── clean-code/              # Clean code principles and guidelines
-│   │   ├── naming.md           # Meaningful naming conventions
-│   │   ├── functions.md        # Function design principles
-│   │   ├── comments.md         # When and how to comment code
-│   │   └── formatting.md       # Code formatting standards
-│   ├── testing/                 # Testing best practices
-│   │   ├── tdd-approach.md     # Test-driven development guide
-│   │   ├── test-types.md       # Unit, integration, e2e testing
-│   │   ├── test-quality.md     # FIRST principles and quality standards
-│   │   └── testing-strategies.md
-│   ├── tech-stack/              # Technology preferences and selection
-│   │   ├── preferred-stack.md   # Default technology choices
-│   │   ├── selection-criteria.md # How to evaluate tools
-│   │   └── research-process.md  # How to research before building
-│   ├── development-workflow/    # Development processes and tools
-│   │   ├── mcp-integration.md   # Model Context Protocol setup
-│   │   ├── git-workflow.md      # Git best practices
-│   │   └── code-review.md       # Review checklist and standards
-│   └── documentation/           # Documentation standards
-│       ├── mermaid-diagrams.md  # Using diagrams for complex workflows
-│       ├── api-documentation.md # API documentation standards
-│       └── project-docs.md      # Project documentation guidelines
-├── examples/                    # Code examples and templates
-│   ├── clean-code-examples/
-│   ├── test-examples/
-│   └── project-templates/
-└── checklists/                  # Quick reference checklists
-    ├── code-review-checklist.md
-    ├── pre-commit-checklist.md
-    └── project-setup-checklist.md
+```bash
+git clone https://github.com/YOUR_USERNAME/vibe-coding.git ~/.claude
 ```
 
-## Core Principles
+### Setup Script
 
-### 1. Clean Code Philosophy
-- Write self-documenting code with meaningful names
-- Keep functions small and focused on single responsibilities
-- Minimize comments by making code intention-revealing
-- Follow consistent formatting and organization patterns
+For a complete setup that removes unnecessary files:
 
-### 2. Test-Driven Development
-- Write tests before implementation (Red-Green-Refactor)
-- Focus on testing behaviors, not implementation details
-- Ensure tests are Fast, Independent, Repeatable, Self-validating, and Timely
+```bash
+#!/bin/bash
+# setup-claude-config.sh
 
-### 3. Research-First Approach
-- Always research existing solutions before building from scratch
-- Prefer well-adopted tools with active communities
-- Evaluate multiple options based on stability, documentation, and compatibility
+# Clone the repository to ~/.claude
+git clone https://github.com/YOUR_USERNAME/vibe-coding.git ~/.claude
 
-### 4. Preferred Technology Stack
-- **Language**: TypeScript for type safety
-- **Runtime**: Node.js for server-side execution
-- **Backend**: Express.js for APIs
-- **Frontend**: React for user interfaces
-- **Package Manager**: pnpm for efficient dependency management
+# Navigate to the directory
+cd ~/.claude
 
-## Quick Start for AI Agents
+# Remove files not needed for Claude Code configuration
+rm -f README.md
+rm -rf .git
+rm -rf .idea
 
-1. **Before coding**: Read the clean code principles and understand the project's existing patterns
-2. **Write tests first**: Follow TDD approach with failing tests before implementation
-3. **Research tools**: Check existing solutions and evaluate options before building
-4. **Follow conventions**: Mimic existing code style and use established libraries
-5. **Document work**: Create mermaid diagrams for complex workflows and document decisions
+# Create a local backup of the original CLAUDE.md if one exists
+if [ -f ~/CLAUDE.md ]; then
+    cp ~/CLAUDE.md ~/CLAUDE.md.backup
+    echo "Backed up existing ~/CLAUDE.md to ~/CLAUDE.md.backup"
+fi
 
-## Key Resources
+echo "Claude Code configuration setup complete!"
+echo "Your configuration includes:"
+echo "  - CLAUDE.md with project instructions"
+echo "  - Agent definitions in agents/"
+echo "  - Clean code documentation in docs/"
+echo "  - Code review checklists in checklists/"
+echo "  - Examples in examples/"
+```
 
-- [Clean Code Principles](docs/clean-code/) - Uncle Bob's clean code guidelines adapted for AI agents
-- [Testing Guidelines](docs/testing/) - Comprehensive testing strategies and TDD approach
-- [Tech Stack Guide](docs/tech-stack/) - Technology preferences and selection criteria
-- [MCP Integration](docs/development-workflow/mcp-integration.md) - Setting up Model Context Protocol servers
-- [Code Review Checklist](checklists/code-review-checklist.md) - Quality standards verification
+Save the script as `setup-claude-config.sh` and run:
 
-## For Human Developers
+```bash
+chmod +x setup-claude-config.sh
+./setup-claude-config.sh
+```
 
-This repository can also serve as a reference for human developers who want to understand the coding standards and practices that AI agents should follow when working on their projects.
+## What's Included
 
-## Contributing
+### Configuration Files
 
-This is a living document that should evolve with industry best practices. Updates should reflect:
-- New coding standards or methodologies
-- Technology preference changes
-- Lessons learned from real-world projects
-- Community feedback and improvements
+- **CLAUDE.md**: Project-specific instructions that reference all documentation
+- **agents/**: Specialized agent definitions
+  - `data-analyst.md`: Data analysis and visualization expert
+  - `backend-engineer.md`: Backend API and database specialist
+  - `frontend-engineer.md`: UI/UX and web application developer
+  - `architect.md`: System design and architecture expert
+
+### Documentation Structure
+
+```
+├── CLAUDE.md                    # Main configuration file
+├── agents/                      # Agent definitions
+│   ├── architect.md
+│   ├── backend-engineer.md
+│   ├── data-analyst.md
+│   └── frontend-engineer.md
+├── docs/                        # Comprehensive documentation
+│   ├── clean-code/             # Clean code principles
+│   ├── development-workflow/   # Development processes
+│   ├── tech-stack/            # Technology preferences
+│   └── testing/               # Testing approaches
+├── examples/                   # Code examples and templates
+└── checklists/                # Quick reference checklists
+```
+
+## Using the Agents
+
+The configured agents will be automatically available in Claude Code. They will be used proactively when:
+
+- **data-analyst**: Working with data files, creating visualizations, or statistical analysis
+- **backend-engineer**: Building APIs, designing databases, or server-side logic
+- **frontend-engineer**: Creating UI components, handling state management, or styling
+- **architect**: Designing systems, making technology decisions, or creating documentation
+
+## Customization
+
+After setup, you can customize:
+
+1. **Edit CLAUDE.md** to add project-specific instructions
+2. **Modify agents** in the `agents/` directory to fit your workflow
+3. **Add new agents** by creating new `.md` files in `agents/` following the format
+4. **Update documentation** in `docs/` to reflect your standards
+
+## Manual Setup (Alternative)
+
+If you prefer manual setup:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/vibe-coding.git
+   ```
+
+2. Copy configuration files:
+   ```bash
+   cp -r vibe-coding/CLAUDE.md ~/.claude/
+   cp -r vibe-coding/agents ~/.claude/
+   cp -r vibe-coding/docs ~/.claude/
+   cp -r vibe-coding/checklists ~/.claude/
+   cp -r vibe-coding/examples ~/.claude/
+   ```
+
+3. Remove the cloned repository:
+   ```bash
+   rm -rf vibe-coding
+   ```
+
+## Requirements
+
+- Git installed on your system
+- Claude Code CLI installed
+- Write permissions to your home directory
+
+## Support
+
+For issues or improvements, please open an issue in the repository.
