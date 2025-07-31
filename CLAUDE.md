@@ -52,6 +52,13 @@ Use examples from `examples/test-examples/` as reference.
 
 @docs/tech-stack/preferred-stack.md
 
+**Important Technology Guidelines:**
+- Always prioritize the project's existing technology stack before defaulting to preferred technologies
+- Research and understand what technologies are already in use in the current project
+- Ask for permission before introducing new technologies that require infrastructure changes
+- When suggesting new tools or frameworks, explain why they're needed and what infrastructure impact they may have
+- Prefer extending existing technology choices over introducing new ones unless there's a compelling reason
+
 ## Project Structure
 
 When creating new files or directories:
