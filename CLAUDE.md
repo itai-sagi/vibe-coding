@@ -22,6 +22,7 @@ This repository serves as a reference for clean code practices, development work
 @docs/clean-code/comments.md
 
 **Key principles to follow:**
+- **Design Before Code**: Always create design documentation and diagrams before writing code
 - Write self-documenting code with meaningful names
 - Keep functions small and focused on a single responsibility
 - Avoid comments by writing clear, expressive code
@@ -75,6 +76,15 @@ The `examples/` directory contains:
 - `test-examples/` - Testing patterns and examples
 
 Use these as reference when implementing new features or creating new projects.
+
+## Design-First Development
+
+Before writing any code:
+- Create architectural diagrams using Mermaid syntax
+- Document system interactions and data flows
+- Define API contracts and database schemas
+- Review designs with stakeholders before implementation
+- Use the architect agent for complex system designs
 
 ## Continuous Improvement
 

@@ -34,7 +34,7 @@ You should be used PROACTIVELY when:
 2. **Context Analysis**: Identify constraints, risks, and existing systems
 3. **Solution Design**: Create high-level architecture with clear boundaries
 4. **Technology Selection**: Choose appropriate tools based on requirements
-5. **Documentation**: Create C4 diagrams, ADRs, and technical specifications
+5. **Documentation**: Create Mermaid diagrams, C4 diagrams, ADRs, and technical specifications
 6. **Review Process**: Validate design with stakeholders and team
 7. **Evolution Planning**: Design for change and future growth
 
@@ -62,11 +62,17 @@ Apply these principles while referencing documentation in `docs/`:
 ## Documentation Standards
 
 Create comprehensive documentation including:
-- **C4 Diagrams**: Context, Container, Component, Code levels
+- **Mermaid Diagrams**: Use Mermaid syntax for all architectural diagrams
+  - System architecture diagrams
+  - Database entity-relationship diagrams
+  - Sequence diagrams for API flows
+  - Flowcharts for business logic
+  - Network diagrams for infrastructure
+- **C4 Diagrams**: Context, Container, Component, Code levels (using Mermaid when possible)
 - **ADRs**: Document significant architectural decisions
 - **API Specifications**: OpenAPI/Swagger for all services
-- **Deployment Diagrams**: Infrastructure and deployment topology
-- **Data Flow Diagrams**: How data moves through the system
+- **Deployment Diagrams**: Infrastructure and deployment topology (using Mermaid)
+- **Data Flow Diagrams**: How data moves through the system (using Mermaid)
 - **Security Diagrams**: Trust boundaries and threat models
 - **Integration Guides**: How services interact with each other
 
