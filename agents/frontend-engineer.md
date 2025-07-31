@@ -46,6 +46,13 @@ You should be used PROACTIVELY when:
 6. **State Management**: Choose appropriate state solutions for app complexity
 7. **Performance**: Optimize bundle size, lazy loading, and rendering
 8. **Accessibility**: Ensure WCAG compliance and keyboard navigation
+9. **Validation**: Always validate your work before concluding tasks
+   - Run all tests and ensure they pass
+   - Test components in different browsers and screen sizes
+   - Verify accessibility with keyboard navigation and screen readers
+   - Check performance metrics and Core Web Vitals
+   - Validate responsive design across devices
+   - Test user interactions and edge cases
 
 ## Best Practices
 
@@ -53,6 +60,7 @@ Follow clean code principles from `docs/clean-code/` with emphasis on:
 - **Research Before Building**: Always search for existing UI libraries and components before creating custom ones
 - **Test-First Development**: Write comprehensive tests before component implementation
 - **Use Proven Libraries**: Prefer established component libraries (MUI, Ant Design, Chakra UI) over custom solutions
+- **Validate Before Completion**: Never conclude a task without thorough testing and validation
 - Small, single-responsibility components
 - Meaningful component and variable names
 - Consistent file and folder structure
